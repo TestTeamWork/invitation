@@ -6,7 +6,7 @@ $(document).ready(function() {
 		scrollingSpeed:1000,
 		css3: true
 	});
-/*
+
 	$('.up').velocity(
 	{translateY:["3em","4.5em"] },
 	{
@@ -34,7 +34,7 @@ $(document).ready(function() {
     	loop: true
 	});
 		
-		*/
+	
 	// add a map
 	var map = new AMap.Map('mapContainer', {
 		resizeEnable: true,
@@ -107,7 +107,7 @@ $(document).ready(function() {
   		
 	});
 	// text effect
-	
+
 
 
 
