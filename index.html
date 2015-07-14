@@ -11,8 +11,6 @@
 
 
 	<link rel="stylesheet" type="text/css" href="lib/jquery.fullPage.css" />
-	
-
 	<link rel="stylesheet" type="text/css" href="style.css" />
 
 	<!--[if IE]>
@@ -28,95 +26,13 @@
 	<script type="text/javascript" src="lib/velocity.min.js"></script> <!-- for the animation -->
 	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=acb984757b71c97aed67d2e830bf29d5"></script>
 
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				anchors: ['1stPage', '2ndPage', '3rdPage'],
-				loopTop: true,
-				loopBottom: true,
-				scrollingSpeed:1000,
-				css3: true
-			});
-
-			$('.up').velocity(
-			{translateY:["0em","1.5em"] },
-			{
-				duration: 1700 ,
-    		 	loop: true
-			});
-		
-			$('.down').velocity(
-			{translateY: ["1.5em","0em"] },
-			{
-				duration: 1700 ,
-    		 	loop: true
-			});
-
-			$('.fp-prev').velocity(
-			{translateX: ["1.5em","0em"] },
-			{
-				duration: 1700 ,
-    		 	loop: true
-			});
-			$('.fp-next').velocity(
-			{translateX: ["-1.5em","0em"] },
-			{
-				duration: 1700 ,
-    		 	loop: true
-			});
-		
-			// add a map
-			var map = new AMap.Map('mapContainer', {
-				resizeEnable: true,
-				rotateEnable: true,
-				dragEnable: true,
-				zoomEnable: true,
-				//设置可缩放的级别
-				zooms: [3,18],
-				//传入2D视图，设置中心点和缩放级别
-				view: new AMap.View2D({
-					center: new AMap.LngLat(116.36812,39.835886),
-					zoom: 16
-				})
-			});		
-
-			addMarker(map);
-			function addMarker(map){
-				map.clearMap();
-		    	new AMap.Marker({	
-		    		map: map,  	
-					icon: 'imgs/map-marker.png',
-					position: new AMap.LngLat(116.364859,39.836727),
-					offset: new AMap.Pixel(-12,-36)
-				});
-			}
-
-			// prevent page scrolling when you move the mapContainer on touch device
- 			mapContainer.addEventListener('touchstart', function(e){
-        		e.preventDefault(); // prevent default click behavior
- 				$.fn.fullpage.setAllowScrolling(false);
-    		}, false);
- 			// enable page scrolling when you move other parts
-    		mapContainer.addEventListener('touchend', function(e){
-        		e.preventDefault(); // prevent default click behavior
- 				$.fn.fullpage.setAllowScrolling(true);
-    		});
-			document.getElementById('button').onclick = (function() {
-    			document.getElementsByTagName('span')[0].innerHTML = '期待您的光临!';
-    		return false;
-			});
-
-			
-			document.getElementById('yourAudioTag').play();
-		});
-	
-	</script>
+	<script src="app.js"></script>
 </head>
 <body>
-
-<audio preload="auto">
-    <source src="https://github.com/nclud/2011.beercamp.com/blob/gh-pages/audio/inception.mp3?raw=true" type="audio/mp3" />
-    <source src="https://github.com/nclud/2011.beercamp.com/blob/gh-pages/audio/inception.ogg?raw=true" type="audio/ogg" />
+<div id="speaker"></div>
+<audio id="player" autoplay="autoplay" >
+    <source src="AThousandYears.mp3" type="audio/mp3" />
+    <source src="AThousandYears.ogg" type="audio/ogg" />
 </audio>
 
 <div id="fullpage">
@@ -128,12 +44,16 @@
 	<div class="section" id="section1">
 	    <div class="slide" id="slide1">
 	    	<div class="content">
-	    		<h3>时间：2015年9月5号， 周六</h3>
-	    		<h3>地点：滨海建国大酒店</h3>
-	    		<h3>交通：天津滨海建国大酒店距离滨海国际机场38公里，您可以选择机场大巴或者出租车前往酒店。
-     				如果您乘坐机场大巴，请在滨海国际机场国内出口处到达厅乘前往天津开发区的大巴车，车票25元。抵达泰达中心站，然后搭乘出租车约9元到达酒店；
-   					如果您选择出租车，从滨海国际机场到酒店约170元车费（含20元高速费），请别忘了放在车上的行李。</h3>
-	    		<h6>向右滑动可查看地图</h6>
+				
+			<h3>时间：2015年9月5号， 周六</h3>
+	    	<h3>地点：滨海建国大酒店</h3>
+	    	<h3>交通：天津滨海建国大酒店距离滨海国际机场38公里，您可以选择机场大巴或者出租车前往酒店。如果您乘坐机场大巴，请在滨海国际机场国内出口处到达厅乘前往天津开发区的大巴车，车票25元。抵达泰达中心站，然后搭乘出租车约9元到达酒店；如果您选择出租车，从滨海国际机场到酒店约170元车费（含20元高速费），请别忘了放在车上的行李。</h3>
+	    	<h6>向右滑动可查看地图</h6>
+		
+
+
+
+	    		
 	    	</div>
 	    </div>
 

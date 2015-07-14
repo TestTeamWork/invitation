@@ -3,11 +3,15 @@
 	/* Style for our header texts
 	* --------------------------------------- */
 	h1{
-		font-size: 5em;
-		font-family:Arial, Helvetica, "Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
+		font-size: 7em;
+		font-family: Georgia, "Times New Roman", "KaiTi", "楷体", STKaiti, "华文楷体", sans-serif;
 		color: #fff;
 		margin:0;
 		padding:0;
+		letter-spacing: 0.15em;
+		/*text-shadow:#969696 1px 3px 0, rgba(230, 126, 34,1.0) 1px 13px 5px;*/
+		text-shadow:#fff 0 0 10px;
+		/*text-shadow: 8px 8px 0 rgba(255,0,180,0.5);*/
 	}
 
 	/* Centered texts in each section
@@ -89,6 +93,7 @@
 	z-index: 9;
 }
 
+
 /* ---------------------------------*/
 /*  button style */
 #button {
@@ -148,3 +153,24 @@
     -o-transform: translate(0, 4px);
     transform: translate(0, 4px);
 }
+
+/*  speaker */
+#player {
+  height: 0;
+  width: 0
+}
+
+/* Apologies for the large base64 image file */
+
+#speaker{
+	background-image: url("imgs/play-button.png");
+	background-repeat:no-repeat;
+	background-size: 200%;
+  	background-position: 129% -11%;
+ 	height: 70px;
+  	width: 117px;
+  	cursor: pointer;
+  	position: absolute;
+  	z-index: 99;
+	}
+
