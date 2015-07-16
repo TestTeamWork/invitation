@@ -6,12 +6,13 @@
 		font-size: 7em;
 		font-family: Georgia, "Times New Roman", "KaiTi", "楷体", STKaiti, "华文楷体", sans-serif;
 		color: #fff;
-		margin:0;
+		margin:1em 0 0;;
 		padding:0;
 		letter-spacing: 0.15em;
 		/*text-shadow:#969696 1px 3px 0, rgba(230, 126, 34,1.0) 1px 13px 5px;*/
 		text-shadow:#fff 0 0 10px;
 		/*text-shadow: 8px 8px 0 rgba(255,0,180,0.5);*/
+		z-index: 22;
 	}
 
 	/* Centered texts in each section
@@ -21,7 +22,9 @@
 	}
 	
 	/* Defining each section background and styles
+	
 	* --------------------------------------- */
+	/*
 	#section0{
 		background-image: url("imgs/back.jpg");
 		background-repeat: repeat;
@@ -32,7 +35,7 @@
 		background: -webkit-linear-gradient(#969AC6, #636F8F);
 		background: linear-gradient(#969AC6,#636F8F);
 	}
-
+*/
 	/*Adding background for the slides
 	* --------------------------------------- */
 	#slide1{
@@ -72,6 +75,34 @@
 	z-index: 99;
 }
 
+	/* START OF style for the heart */
+.left,.right{
+  display:inline-block
+}
+.left{
+  width:170px;
+  height:239px;
+  margin-right:-4px
+}
+
+.outside{
+  display:block;
+  height:34px;
+}
+.inside{
+  width:30px;
+  height:30px;
+  background-color:#ff0033;
+  display:inline-block;
+  float:right;
+  margin:2px;
+}
+div.right>div>div{
+  float:left;
+}
+/* END OF style for the heart */
+
+
 .up{
 	background-image: url("imgs/arrow-up.png");
 	background-repeat: no-repeat;
@@ -81,6 +112,11 @@
 	width: 6em;
 	height: 5em;
 	z-index: 9;
+	animation-name: up;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 .down{
 	background-image: url("imgs/arrow-down.png");
@@ -92,7 +128,22 @@
 	height: 6em;
 	z-index: 9;
 }
-
+@keyframes up {
+     0%  { bottom: 0em;}
+    100%  { bottom: 3em;}
+}
+@-webkit-keyframes up {
+     0%  { bottom: 0em;}
+    100%  { bottom: 3em;}
+}
+@-moz-keyframes up {
+      0%  { bottom: 0em;}
+    100%  { bottom: 3em;}
+}
+@-ms-keyframes up {
+     0%  { bottom: 0em;}
+    100%  { bottom: 3em;}
+}
 
 /* ---------------------------------*/
 /*  button style */
