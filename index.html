@@ -2,165 +2,172 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Looping - fullPage.js</title>
-	<meta name="author" content="Alvaro Trigo Lopez" />
-	<meta name="description" content="fullPage looping demo." />
-	<meta name="keywords"  content="fullpage,jquery,looping,loop,loopTop,loopBottom,demo" />
-	<meta name="Resource-type" content="Document" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>请柬</title>
+    <meta name="author" content="Zhihui Yan"/>
+    <meta name="description" content="the wedding invitation"/>
+    <meta name="keywords" content="animation,velocity"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-	<link rel="stylesheet" type="text/css" href="lib/jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="style.css" />
-	<link rel="stylesheet" type="text/css" href="lib/style.css" />
+    <link rel="stylesheet" type="text/css" href="lib/jquery.fullPage.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/jquery-sakura.min.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
-
-	<script src="lib/jquery-2.1.4.js"></script>
-	<script src="lib/jquery-ui.js"></script>
-
-	<script type="text/javascript" src="lib/jquery.fullPage.js"></script>
-	<script type="text/javascript" src="lib/velocity.min.js"></script> <!-- for the animation -->
-	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=acb984757b71c97aed67d2e830bf29d5"></script>
-	<script type="text/javascript" src="lib/typed.js"></script> <!-- for the animation -->
-
-	<script src="app.js"></script>
+    <!--[if IE]>
+    <script type="text/javascript">
+        var console = {
+            log: function () {
+            }
+        };
+    </script>
+    <![endif]-->
+    <script type="text/javascript"
+            src="http://webapi.amap.com/maps?v=1.3&key=acb984757b71c97aed67d2e830bf29d5"></script>
 </head>
 <body>
-	<div class="stars"></div>
-    <div class="twinkling"></div>
-	<div id="speaker"></div>
-	<audio id="player" autoplay="autoplay" >
-    	<source src="AThousandYears.mp3" type="audio/mp3" />
-    	<source src="AThousandYears.ogg" type="audio/ogg" />
-	</audio>
-	
+<div class="stars"></div>
+<div class="twinkling"></div>
+<div id="speaker"></div>
+<audio id="player" autoplay="autoplay" >
+<source src="you.mp3" type="audio/mp3" />
+</audio>
+
 <div id="fullpage">
-	<div class="section " id="section0">
-	
+    <div class="section " id="section0">
+        <div class='left'>
+            <div class="outside" style='padding-right:68px'>
+                <div class="inside"></div>
+                <div class="inside"></div>
+            </div>
+            <div class="outside" style='padding-right:34px'>
+                <div class="inside"></div>
+                <div class="inside"></div>
+                <div class="inside"></div>
+                <div class="inside"></div>
+            </div>
+            <div class="outside">
+                <div class="inside"></div>
+                <div class="inside"></div>
+                <div class="inside"></div>
+                <div class="inside"></div>
+                <div class="inside"></div>
+            </div>
+            <div class="outside">
+                <div class="inside"></div>
+                <div class="inside"></div>
+                <div class="inside"></div>
+                <div class="inside"></div>
+                <div class="inside"></div>
+            </div>
+            <div class="outside">
+                <div class="inside"></div>
+                <div class="inside"></div>
+                <div class="inside"></div>
+                <div class="inside"></div>
+            </div>
+            <div class="outside">
+                <div class="inside"></div>
+                <div class="inside"></div>
+                <div class="inside"></div>
+            </div>
+            <div class="outside">
+                <div class="inside"></div>
+                <div class="inside"></div>
+            </div>
+            <div class="outside">
+                <div class="inside"></div>
+            </div>
+        </div>
+        <div class='right'>
+            <div class="outside" style='padding-left:34px'>
+                <div class="inside"></div>
+                <div class="inside"></div>
+            </div>
+            <div style='' class="outside">
+                <div class="inside"></div>
+                <div class="inside"></div>
+                <div class="inside"></div>
+                <div class="inside"></div>
+            </div>
+            <div class="outside">
+                <div class="inside"></div>
+                <div class="inside"></div>
+                <div class="inside"></div>
+                <div class="inside"></div>
+            </div>
+            <div class="outside">
+                <div class="inside"></div>
+                <div class="inside"></div>
+                <div class="inside"></div>
+                <div class="inside"></div>
+            </div>
+            <div class="outside">
+                <div class="inside"></div>
+                <div class="inside"></div>
+                <div class="inside"></div>
+            </div>
+            <div class="outside">
+                <div class="inside"></div>
+                <div class="inside"></div>
+            </div>
+            <div class="outside">
+                <div class="inside"></div>
+            </div>
+        </div>
 
+        <h1 class="text" id="text"></h1>
 
-	<div class='left'>
-  <div class="outside" style='padding-right:68px'>
-    <div class="inside"></div>
-    <div class="inside"></div>
-  </div>
-  <div class="outside" style='padding-right:34px'>
-    <div class="inside"></div>
-    <div class="inside"></div>
-    <div class="inside"></div>
-    <div class="inside"></div>
-  </div>
-  <div class="outside">
-    <div class="inside"></div>
-    <div class="inside"></div>
-    <div class="inside"></div>
-    <div class="inside"></div>
-    <div class="inside"></div>
-  </div>
-  <div class="outside">
-    <div class="inside"></div>
-    <div class="inside"></div>
-    <div class="inside"></div>
-    <div class="inside"></div>
-    <div class="inside"></div>
-  </div>
-  <div class="outside">
-    <div class="inside"></div>
-    <div class="inside"></div>
-    <div class="inside"></div>
-    <div class="inside"></div>
-  </div>
-  <div class="outside">
-    <div class="inside"></div>
-    <div class="inside"></div>
-    <div class="inside"></div>
-  </div>
-  <div class="outside">
-    <div class="inside"></div>
-    <div class="inside"></div>
-  </div>
-  <div class="outside">
-    <div class="inside"></div>
-  </div>
-</div>
-<div class='right'>
-  <div class="outside" style='padding-left:34px'>
-    <div class="inside"></div>
-    <div class="inside"></div>
-  </div>
-  <div style='' class="outside">
-    <div class="inside"></div>
-    <div class="inside"></div>
-    <div class="inside"></div>
-    <div class="inside"></div>
-  </div>
-  <div class="outside">
-    <div class="inside"></div>
-    <div class="inside"></div>
-    <div class="inside"></div>
-    <div class="inside"></div>
-  </div>
-  <div class="outside">
-   <div class="inside"></div>
-    <div class="inside"></div>
-    <div class="inside"></div>
-    <div class="inside"></div>
-  </div>
-  <div class="outside">
-    <div class="inside"></div>
-    <div class="inside"></div>
-    <div class="inside"></div>
-  </div>
-  <div class="outside">
-    <div class="inside"></div>
-    <div class="inside"></div>
-  </div>
-  <div class="outside">
-     <div class="inside"></div>
-  </div>
-</div>
+        <div class="up"></div>
+    </div>
+    <div class="section" id="section1">
+        <div class="content">
+            <h3 id="text1"></h3>
+        </div>
+        <div class="up"></div>
+        <div class="down"></div>
+    </div>
+    <div class="section" id="section2">
+        <div class="slide" id="slide1">
+            <div class="content">
+                <h3 id="text2"></h3>
+            </div>
+        </div>
 
+        <div class="slide" id="slide2">
+            <h3>左右翻页可查看酒店信息</h3>
 
-		<h1 class="text"></h1>
-		<div class ="up"></div>
-	</div>
+            <div id="mapContainer"></div>
+        </div>
 
-	<div class="section" id="section1">
-	    <div class="slide" id="slide1">
-	    	<div class="content">
-				
-			<h3 class="text2"></h3>
-	    	<h3></h3>
-	    	<h3></h3>
-	    	<h6>向右滑动可查看地图</h6>
-		
-	    	</div>
-	    </div>
+        <div class="slide" id="slide3">
+            <h1>酒店外观</h1>
+            <img src="imgs/hotel.jpg">
+        </div>
+        <div class="down"></div>
+        <div class="up"></div>
+    </div>
+    <div class="section" id="section3">
+        <a href="#" id="button">
+            <span>我要参加!</span>
+        </a>
+        <br/><br/>
+        <h3 id="tip">虽然不能身临现场，但是依旧祝你们
+        <a href="#" id="button2">
+            <span id="tipBT">百年好合！</span>
+        </a></h3>
 
-	    <div class="slide" id="slide2">
-	    <p>find the place</p>
-			<div id="mapContainer"></div>
-	    </div>
-
-	     <div class="slide" id="slide3">
-	    	<h1>photo of the hotel</h1>
-	    	<img src="imgs/hotel.jpg"> 
-	    </div>
-	    <div class ="down"></div>
-		<div class ="up"></div>
-	</div>
-	<div class="section" id="section2">
-		<a href="#" id="button">
-    		<span>我要参加!</span>
-		</a>
-		 <div class ="down"></div>
-	</div>
+        <div class="down"></div>
+    </div>
 </div>
 
 </body>
+<script src="lib/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="lib/jquery.fullPage.js"></script>
+<script type="text/javascript" src="lib/velocity.min.js"></script>
+<!-- for the animation -->
+<script type="text/javascript" src="lib/typed.js"></script>
+<script type="text/javascript" src="lib/jquery-sakura.min.js"></script>
+<!-- for the animation -->
+<script async src="app.js"></script>
 </html>
