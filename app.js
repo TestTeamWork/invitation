@@ -21,15 +21,16 @@ $(document).ready(function () {
             if (anchorLink == '2ndPage') {
                 // animation for the text
                 $("#text1").typed({
-                    strings: ["人生难得一知己<br/>" +
-                    "结婚人生特大喜<br/>" +
-                    "邀请好友来相聚<br/>" +
-                    "喜酒斟满盼光临<br/>" +
-                    "礼品再多不嫌多<br/>" +
-                    "拿根鸡毛不嫌少<br/>" +
-                    "重要大家乐呵呵<br/>" +
-                    "<br/><br/>新郎： 徐海明<br/>" +
-                    "新娘： 严智慧<br/>恭候您的光临!"],
+                    strings: ["缘分让我们 相遇，相识<br/><br/>" +
+                    "爱恋让我们 相知，相守<br/><br/>"+
+                    "愿成为童话里彼此的天使<br/><br/>" +
+                    "相信着 幸福和快乐是结局<br/><br/>" +
+                    "<br/><br/>" +
+                    "新郎： 徐海明<br/>" +
+                    "新娘： 严智慧<br/><br/>"+
+                    "<br/><br/>"+
+                    "希望您能见证这份感情<br>"+
+                    "分享这份甜蜜!"],
                     typeSpeed: 150,
                     backDelay: 1000,
                     loop: false,
@@ -44,7 +45,7 @@ $(document).ready(function () {
                     + "地址：天津市 滨海新区 第三大街3号芳林泰达园A座<br/>"
                     + "交通：如果您乘坐公交，可在到达塘沽站之后在 赵家地 站上车，" +
                     "518路内环(轻轨东海路-轻轨东海路) 至 南海路站下车，请不要将贵重物品遗忘在车上哦。"],
-                    typeSpeed: 150,
+                    typeSpeed: 100,
                     backDelay: 1000,
                     loop: false,
                     showCursor: false,
