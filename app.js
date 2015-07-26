@@ -21,13 +21,13 @@ $(document).ready(function () {
             if (anchorLink == '2ndPage') {
                 // animation for the text
                 $("#text1").typed({
-                    strings: ["缘分让我们 相遇，相识<br/><br/>" +
-                    "爱恋让我们 相知，相守<br/><br/>"+
-                    "愿成为童话里彼此的天使<br/><br/>" +
-                    "相信着 幸福和快乐是结局<br/><br/>" +
-                    "<br/><br/>" +
+                    strings: ["缘分让我们 相遇，相识<br/>" +
+                    "爱恋让我们 相知，相守<br/>"+
+                    "愿成为童话里彼此的天使<br/>" +
+                    "相信着 幸福和快乐是结局<br/>" +
+                    "<br/>" +
                     "新郎： 徐海明<br/>" +
-                    "新娘： 严智慧<br/><br/>"+
+                    "新娘： 严智慧<br/>"+
                     "<br/><br/>"+
                     "希望您能见证这份感情<br>"+
                     "分享这份甜蜜!"],
@@ -45,7 +45,7 @@ $(document).ready(function () {
                     + "地址：天津市 滨海新区 第三大街3号芳林泰达园A座<br/>"
                     + "交通：如果您乘坐公交，可在到达塘沽站之后在 赵家地 站上车，" +
                     "518路内环(轻轨东海路-轻轨东海路) 至 南海路站下车，请不要将贵重物品遗忘在车上哦。"],
-                    typeSpeed: 100,
+                    typeSpeed: 80,
                     backDelay: 1000,
                     loop: false,
                     showCursor: false,
@@ -134,7 +134,12 @@ $(document).ready(function () {
             position: new AMap.LngLat(117.71801, 39.025124),
             offset: new AMap.Pixel(-12, -36)
         });
-    }
+    };
+    map.plugin(["AMap.ToolBar"], function(){
+			//加载工具条
+			var tool = new AMap.ToolBar();
+			map.addControl(tool);
+		});
 
     // prevent page scrolling when you move the mapContainer on touch device
     mapContainer.addEventListener('touchstart', function (e) {
@@ -160,29 +165,32 @@ $(document).ready(function () {
     //play the audio
     var vid = document.getElementById("player");
 
-    var isAndroidDevice = navigator.userAgent.match(/(Android|Chrome)/);
-    // if is android device then automatically play the audio
-    // and set the speaker to pause image
-    if (isAndroidDevice) {
-        var count = 1;
-        $("#speaker").css("background-position", "61% -11%");
+    var isIOS = false,
+    p = navigator.platform;
+	if( p === 'iPad' || p === 'iPhone' || p === 'iPod' ){
+    	isIOS = true;
+	}
+    // if is APPLE device then set the speaker to pause image
+    if (isIOS) {
+        var count = 0;
+        $("#speaker").css("background-position", "105% -7%");
     }
     else {
-        count = 0;
+        count = 1;
     }
-
+console.log(isIOS);
     $("#speaker").click(function () {
         if (count == 0) {
             vid.play();
-            $("#speaker").animate({"backgroundPositionX": "-=70%"}, "slow", "swing");
+            $("#speaker").animate({"backgroundPositionX": "-=55%"}, "slow", "swing");
             //$("#speaker").css("backgroundPositionX", "-=70%");
             count = 1;
         }
         else {
             vid.pause();
-            $("#speaker").animate({"backgroundPositionX": "+=70%"}, "slow", "swing");
+            $("#speaker").animate({"backgroundPositionX": "+=55%"}, "slow", "swing");
             count = 0;
         }
-
+console.log(count);
     });
 });
