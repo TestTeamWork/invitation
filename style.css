@@ -12,8 +12,8 @@ h3{font-size:1em;font-family:Arial, Helvetica, "Hiragino Sans GB", "Microsoft Ya
 .outside{display:block;height:34px;}
 .inside{width:30px;height:30px;background-color:#ff0033;display:inline-block;float:right;margin:2px;}
 div.right>div>div{float:left;}
-.up{background-image:url("imgs/arrow-up.png");background-repeat:no-repeat;position:absolute;bottom:1.5em;left:calc(50% - 3em);width:6em;height:5em;z-index:9;}
-.down{background-image:url("imgs/arrow-down.png");background-repeat:no-repeat;position:absolute;top:-0.5em;left:calc(50% - 3em);width:6em;height:6em;z-index:9;}
+.up{background-image:url("imgs/arrow-up.png");background-repeat:no-repeat;position:absolute;bottom:1.5em;left:calc(50% - 26.5px);left:-moz-calc(50% - 26.5px);left:-webkit-calc(50% - 26.5px);width:53px;height:5em;z-index:9;}
+.down{background-image:url("imgs/arrow-down.png");background-repeat:no-repeat;position:absolute;top:-0.5em;left:calc(50% - 26.5px);left:-moz-calc(50% - 26.5px);left:-webkit-calc(50% - 26.5px);width:53px;height:6em;z-index:9;}
 #button, #button2{display:inline-block;-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px;-webkit-box-shadow:0 8px 0 #c5376d, 0 15px 20px rgba(0, 0, 0, .35);-moz-box-shadow:0 8px 0 #c5376d, 0 15px 20px rgba(0, 0, 0, .35);box-shadow:0 8px 0 #c5376d, 0 15px 20px rgba(0, 0, 0, .35);-webkit-transition:-webkit-box-shadow .1s ease-in-out;-moz-transition:-moz-box-shadow .1s ease-in-out;-o-transition:-o-box-shadow .1s ease-in-out;transition:box-shadow .1s ease-in-out;color:#fff;}
 #button{margin-top: 3em;font-size:50px;}
 #button2{margin-top: 1%;font-size: 30px;}
